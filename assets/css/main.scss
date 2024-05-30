@@ -7,3 +7,16 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+.list__item 
+{
+    margin-bottom:  $type-size-1;
+}
+
+
+h2.archive__item-title
+{
+    margin-bottom:  1em;
+    margin: $type-size-6 0 0.5em
+}

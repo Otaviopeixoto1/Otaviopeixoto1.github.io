@@ -120,7 +120,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "otaviopeixotogm@gmail.com"
+      url: "mailto:otaviopeixotogm@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -321,7 +321,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
@@ -333,7 +333,7 @@ defaults:
       type: portfolio
     values:
       layout: single
-      share: true
+      share: false
 
 collections:
   portfolio:
