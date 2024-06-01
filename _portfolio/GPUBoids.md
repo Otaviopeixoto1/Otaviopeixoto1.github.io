@@ -8,4 +8,10 @@ author_profile: true
 prioritynum: 4
 ---
 
+[View Source Code](https://github.com/Otaviopeixoto1/UnityComputeExperiments/tree/main/Assets/GPUBoids){: .btn .btn--primary .btn--x-large}
+{: .text-center}
+
 PLACEHOLDER TEXT
+
+
+![image-center](/assets/images/samples/GPUBoids/200kboidsvid.gif){: .align-center}

@@ -334,6 +334,7 @@ defaults:
     values:
       layout: single
       share: false
+      show_date: false
 
 collections:
   portfolio:
