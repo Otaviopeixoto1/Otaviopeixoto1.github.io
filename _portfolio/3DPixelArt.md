@@ -19,7 +19,7 @@ This project was made with the aim to replicate the pixel art style when renderi
 <p>Pixelization is achieved by rendering the initial image to a small render target and then upscaling it to the final screen resolution with Nearest texture filtering. However, this approach alone will cause some terrible artifacts arround the edge of objects when we move the camera arround: </p>
 
 
-{% include video id="cpYk-ANneAI " provider="youtube" %}
+{% include video id="dmjhtKcGAhM" provider="youtube" %}
 
 
 
@@ -60,8 +60,8 @@ void Update()
 }
 {% endhighlight %}
 
-<p> This results in stable pixels but we can see the camera snapping, causing a slight stuttering effect:</p>
-{% include video id="SYyWcx-E5rI " provider="youtube" %}
+<p> This results in stable pixels but we can still see the camera snapping, causing a slight stuttering effect:</p>
+{% include video id="5ASobBteB7A" provider="youtube" %}
 
 <p> The final stable and smooth result can be obtained by rendering the previous result into a quad and then setting up a secondary camera to render that quad with one pixel of extra margin and then offset this camera by the difference between original and snapped coordinate:</p>
 
@@ -84,7 +84,7 @@ public void SetPixelOffset(Vector2 offset)
 
 
 
-{% include video id="YOhI5M1Ac4Q" provider="youtube" %}
+{% include video id="anDKAFU1lU4" provider="youtube" %}
 
 
 # Outlines
