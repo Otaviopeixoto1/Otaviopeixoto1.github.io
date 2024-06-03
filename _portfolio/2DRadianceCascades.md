@@ -5,15 +5,15 @@ header:
   image: "assets/images/samples/2d radiance cascades/2drad_big.png"
   teaser: "assets/images/samples/2d radiance cascades/2d_rad_small.png"
 author_profile: true
-prioritynum: 2
+prioritynum: 3
 ---
 
 [View Source Code](https://github.com/Otaviopeixoto1/OPEngine/tree/main/src/render/RadianceCascades){: .btn .btn--primary .btn--x-large}
 {: .text-center}
 
-
+<p>
 Radiance Cascades is a novel approach to both 2D and 3D global illumination created by Alexander Sannikov (the original source article can be found 
-<a href="https://drive.google.com/file/d/1L6v1_7HY2X-LV3Ofb6oyTIxgEaP4LOI6/view">here</a>). It is built to produce a noiseless result by sampling and interpolating incoming radiance from a hierarchy of probes placed on the scene. Each hierarchy level/cascade samples the scene with a higher angular frequency (more rays per probe) and reduced spatial frequency (less probes overall). This project uses my custom OpenGL engine ([OPEngine]({% link _portfolio/OPEngine.md %})) to implement this technique in 2D in order to explore its intricacies.
+<a href="https://drive.google.com/file/d/1L6v1_7HY2X-LV3Ofb6oyTIxgEaP4LOI6/view">here</a>). It is built to produce a noiseless result by sampling and interpolating incoming radiance from a hierarchy of probes placed on the scene. Each hierarchy level/cascade samples the scene with a higher angular frequency (more rays per probe) and reduced spatial frequency (less probes overall). This project uses my custom OpenGL engine ([OPEngine]({% link _portfolio/OPEngine.md %})) to implement this technique in 2D in order to explore its intricacies.</p>
 
 
 
