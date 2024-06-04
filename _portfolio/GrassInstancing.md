@@ -1,6 +1,6 @@
 ---
 title: "Instanced Grass Generation (Unity)"
-excerpt: "A GPU driven boid simulation and rendering made in Unity. With the aim to learn and extract the most out of GPU Driven Rendering, I have used Unity's compute shader capabilities and indirect rendering commands to draw "
+excerpt: ""
 header:
   image: "assets/images/samples/GPUBoids/a.png"
   teaser: "assets/images/samples/GPUBoids/a.png"
