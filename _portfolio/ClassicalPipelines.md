@@ -5,7 +5,7 @@ header:
   image: "assets/images/samples/classicpipelines/classic_pipelines.png"
   teaser: "assets/images/samples/classicpipelines/shadows_deferredLights_cropped.png"
 author_profile: true
-prioritynum: 2
+prioritynum: 1
 
 
 gallery1:

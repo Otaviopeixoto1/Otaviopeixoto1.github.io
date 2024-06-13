@@ -5,7 +5,7 @@ header:
   image: "assets/images/samples/2d radiance cascades/2drad_big.png"
   teaser: "assets/images/samples/2d radiance cascades/2d_rad_small.png"
 author_profile: true
-prioritynum: 3
+prioritynum: 2
 ---
 
 [View Source Code](https://github.com/Otaviopeixoto1/OPEngine/tree/main/src/render/RadianceCascades){: .btn .btn--primary .btn--x-large}
