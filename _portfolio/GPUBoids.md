@@ -47,7 +47,7 @@ A GPU driven boid simulation and rendering made in Unity. With the aim to learn 
 <figure style="width: 60%" class="align-center">
   <a href="https://on-demand.gputechconf.com/gtc/2014/presentations/S4117-fast-fixed-radius-nearest-neighbor-gpu.pdf">
   <img src="/assets/images/samples/GPUBoids/boid_space_part.png" alt=""></a>
-  <figcaption>Image caption.</figcaption>
+  <figcaption>Grid based space partitioning.</figcaption>
 </figure>
 
 With this space partitioning scheme, each boid is firstly assigned into a grid cell. Then, based on Rama's presentation and using nvidia's GPU gems <a href="https://developer.nvidia.com/gpugems/gpugems3/part-vi-gpu-computing/chapter-39-parallel-prefix-sum-scan-cuda"> Work Efficient Parallel Prefix Sum (Scan)</a> We improve the memory access pattern on the GPU by sorting the boid array with counting sort. After sorting, we search for nearby boids by iterating over contiguous slices of the array.
