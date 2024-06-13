@@ -6,6 +6,36 @@ header:
   teaser: "assets/images/samples/VCTGI/vct_teaser.png"
 author_profile: true
 prioritynum: 3
+
+gallery1:
+  - url: /assets/images/samples/VCTGI/vct_ao.png
+    image_path: /assets/images/samples/VCTGI/vct_ao.png
+    alt: "placeholder image 1"
+    title: "Ambient Occlusion"
+  - url: /assets/images/samples/VCTGI/vct_direct.png
+    image_path: /assets/images/samples/VCTGI/vct_direct.png
+    alt: "placeholder image 2"
+    title: "Direct Illumination"
+  - url: /assets/images/samples/VCTGI/vct_indirect.png
+    image_path: /assets/images/samples/VCTGI/vct_indirect.png
+    alt: "placeholder image 2"
+    title: "Indirect Illumination"
+
+gallery2:
+  - url: /assets/images/samples/VCTGI/vct_final.png
+    image_path: /assets/images/samples/VCTGI/vct_final.png
+    alt: "placeholder image 1"
+    title: "Final rendered scene"
+
+gallery3:
+  - url: /assets/images/samples/VCTGI/vct_nogi.png
+    image_path: /assets/images/samples/VCTGI/vct_nogi.png
+    alt: "placeholder image 1"
+    title: "Scene with direct illumination and no ambient lighting"
+  - url: /assets/images/samples/VCTGI/vct_gion.png
+    image_path: /assets/images/samples/VCTGI/vct_gion.png
+    alt: "placeholder image 2"
+    title: "Voxel cone traced scene with one bounce of light"
 ---
 
 [View Source Code](https://github.com/Otaviopeixoto1/OPEngine/tree/main/src/render/VoxelConeTracing){: .btn .btn--primary .btn--x-large}
@@ -47,7 +77,7 @@ for (int i = 0; i < 3; i++)
 In addition, the NV_conservative_raster extension was used to guarantee that evert voxel intesected by a triangle is filled.
 </p>
 
-<p> In order to revoxelize the scene in real time without artifacts, we must average the fragment colors for the final output. However, this can be problematic since atomic operations are not available by default for the floating point values stored in RGB texture formats. One approach to this is to rely on another extension called NV_shader_atomic_float, but for learning purposes I chose to use a more manual approach like the one mentioned in <a href="https://www.icare3d.org/research/OpenGLInsights-SparseVoxelization.pdf"> OpenGL Insights: Octree-Based Sparse Voxelization Using the GPU Hardware Rasterizer</a> by Cyril Crassin and Simon Green. In their approach, the voxel texture is chosen to have an unsigned integer format where the colors are packed. We then use the imageAtomicCompSwap() function to average all fragment contributions. The atomic average code is then outlined below: </p>
+<p> In order to revoxelize the scene in real time without artifacts, we must average the fragment colors for the final output. However, this can be problematic since atomic operations are not available by default for the floating point values stored in RGB texture formats. One approach to this is to rely on another extension called NV_shader_atomic_float, but for learning purposes I chose to use a more manual approach like the one mentioned in <a href="https://www.icare3d.org/research/OpenGLInsights-SparseVoxelization.pdf"> OpenGL Insights: Octree-Based Sparse Voxelization Using the GPU Hardware Rasterizer</a> by Cyril Crassin and Simon Green. In their approach, the voxel texture is chosen to have an unsigned integer format where the colors are packed. We then use the imageAtomicCompSwap() function to average all fragment contributions: </p>
 
 
 {% highlight c++ %}
@@ -110,4 +140,13 @@ return vec4(accum.rgb, 1.0f - opacity);
 {% endhighlight %}
 
 
+
+{% include gallery id="gallery1" caption="On the left we have the ambient occlusion from the conetracing, while on the the middle there is the direct illumination results from deferred shading and on right is the conetraced accumulated color" %}
+
+
 # Diffuse Indirect Lighting
+The final combination of the direct illumination with the one bounce of diffuse indirect illumination and the ambient occlusion can be seen below:
+
+{% include gallery id="gallery2" caption="Final result" %}
+
+{% include gallery id="gallery3" caption="Scene rendered without Global illumination and no ambient lighting (left) versus scene with one bounce of diffuse indirect illumination from VCTGI" %}
