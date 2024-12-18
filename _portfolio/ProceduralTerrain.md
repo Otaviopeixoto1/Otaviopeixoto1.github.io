@@ -7,7 +7,8 @@ header:
 author_profile: true
 prioritynum: 7
 ---
-
+**Notice:** This project is currently being updated.
+{: .notice--warning}
 
 [View Source Code](https://github.com/Otaviopeixoto1/Project-Howl/tree/main/Assets/TerrainRenderer){: .btn .btn--primary .btn--x-large}
 {: .text-center}
